@@ -27,7 +27,12 @@ use {
   }
 }
 
-
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
 
     use 'wbthomason/packer.nvim' -- this is essential.
 
@@ -70,5 +75,7 @@ use 'folke/tokyonight.nvim'
 
 use 'nvim-tree/nvim-web-devicons'
 use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
-
+-- [[ Line comment ]]
+use "terrortylor/nvim-comment"
+require('nvim_comment').setup()
 end)
